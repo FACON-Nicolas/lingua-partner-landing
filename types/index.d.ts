@@ -15,6 +15,11 @@ export type SiteConfig = {
   };
 };
 
+type SidebarNavItem = {
+  title: string;
+  items: { title: string; href: string }[];
+};
+
 export type NavItem = {
   title: string;
   href: string;
