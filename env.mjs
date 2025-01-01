@@ -3,5 +3,7 @@ import { z } from "zod";
 
 export const env = createEnv({
   client: {},
-  runtimeEnv: {},
+  runtimeEnv: {
+    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+  },
 });
