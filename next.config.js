@@ -1,7 +1,3 @@
-const { withContentlayer } = require("next-contentlayer2");
-
-import("./env.mjs");
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -20,6 +16,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "randomuser.me",
       },
+      {
+        protocol: "https",
+        hostname: "camo.githubusercontent.com",
+      },
     ],
   },
   experimental: {
@@ -27,4 +27,6 @@ const nextConfig = {
   },
 };
 
-module.exports = withContentlayer(nextConfig);
+module.exports = nextConfig;
+
+module.exports = nextConfig;

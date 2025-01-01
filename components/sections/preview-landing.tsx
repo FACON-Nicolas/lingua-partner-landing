@@ -1,7 +1,5 @@
-import darkPreview from "@/public/_static/images/dark-preview.jpg";
-import lightPreview from "@/public/_static/images/light-preview.jpg";
+import Image from "next/image";
 
-import BlurImage from "@/components/shared/blur-image";
 import MaxWidthWrapper from "@/components/shared/max-width-wrapper";
 
 export default function PreviewLanding() {
@@ -10,23 +8,11 @@ export default function PreviewLanding() {
       <MaxWidthWrapper>
         <div className="h-auto rounded-xl md:bg-muted/30 md:p-3.5 md:ring-1 md:ring-inset md:ring-border">
           <div className="relative overflow-hidden rounded-xl border md:rounded-lg">
-            <BlurImage
-              src={lightPreview}
-              alt="ligth preview landing"
-              className="flex size-full object-contain object-center dark:hidden"
-              width={1500}
-              height={750}
-              priority
-              placeholder="blur"
-            />
-            <BlurImage
-              src={darkPreview}
-              alt="dark preview landing"
-              className="hidden size-full object-contain object-center dark:flex"
-              width={1500}
-              height={750}
-              priority
-              placeholder="blur"
+            <Image
+              src="https://camo.githubusercontent.com/d1b3dcd1f2c6479ef635ec709fb194642f0da44374b27239526a81db1d6ec9f1/68747470733a2f2f64616d2e6d616c742e636f6d2f39353363343838622d353831652d343463632d623033392d3131326266343436323931393f6f72675f69665f736d6c3d313f773d3139323026683d313932302666756e633d626f756e64"
+              alt="Preview of the application interface"
+              width={1920}
+              height={1920}
             />
           </div>
         </div>

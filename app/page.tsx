@@ -1,4 +1,4 @@
-
+import { SiteFooter } from "@/components/layout/site-footer";
 import HeroLanding from "@/components/sections/hero-landing";
 import PreviewLanding from "@/components/sections/preview-landing";
 
@@ -7,6 +7,7 @@ export default function IndexPage() {
     <>
       <HeroLanding />
       <PreviewLanding />
+      <SiteFooter />
     </>
   );
 }

@@ -31,16 +31,16 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             </ul>
           </div>
         ))}
-        <div className="col-span-full flex flex-col items-end sm:col-span-1 md:col-span-2">
+        {/* <div className="col-span-full flex flex-col items-end sm:col-span-1 md:col-span-2">
           <NewsletterForm />
-        </div>
+        </div> */}
       </div>
 
       <div className="border-t py-4">
         <div className="container flex max-w-6xl items-center justify-between">
           {/* <span className="text-muted-foreground text-sm">
             Copyright &copy; 2024. All rights reserved.
-          </span> */}
+          </span> 
           <p className="text-left text-sm text-muted-foreground">
             Built by{" "}
             <Link
@@ -69,17 +69,9 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             >
               Popsy
             </Link>
-          </p>
+          </p> */}
 
           <div className="flex items-center gap-3">
-            <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              <Icons.gitHub className="size-5" />
-            </Link>
             <ModeToggle />
           </div>
         </div>

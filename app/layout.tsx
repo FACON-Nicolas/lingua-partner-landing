@@ -28,19 +28,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSatoshi.variable,
         )}
       >
-        <SessionProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <ModalProvider>{children}</ModalProvider>
-            <Analytics />
-            <Toaster richColors closeButton />
-            <TailwindIndicator />
-          </ThemeProvider>
-        </SessionProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ModalProvider>{children}</ModalProvider>
+          <Analytics />
+          <Toaster richColors closeButton />
+          <TailwindIndicator />
+        </ThemeProvider>
       </body>
     </html>
   );
