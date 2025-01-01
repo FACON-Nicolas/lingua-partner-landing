@@ -17,7 +17,14 @@ export type SiteConfig = {
 
 type SidebarNavItem = {
   title: string;
-  items: { title: string; href: string }[];
+  items: {
+    title: string;
+    href: string;
+    authorizeOnly?: UserRole;
+    icon?: keyof typeof Icons;
+    badge?: number;
+    disabled?: boolean;
+  }[];
 };
 
 export type NavItem = {
