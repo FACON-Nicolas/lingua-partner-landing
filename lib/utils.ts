@@ -26,47 +26,6 @@ export function constructMetadata({
   return {
     title,
     description,
-    keywords: [
-      "Next.js",
-      "React",
-      "Prisma",
-      "Neon",
-      "Auth.js",
-      "shadcn ui",
-      "Resend",
-      "React Email",
-      "Stripe",
-    ],
-    authors: [
-      {
-        name: "mickasmt",
-      },
-    ],
-    creator: "mickasmt",
-    openGraph: {
-      type: "website",
-      locale: "en_US",
-      url: siteConfig.url,
-      title,
-      description,
-      siteName: title,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [image],
-      creator: "@miickasmt",
-    },
-    icons,
-    metadataBase: new URL(siteConfig.url),
-    manifest: `${siteConfig.url}/site.webmanifest`,
-    ...(noIndex && {
-      robots: {
-        index: false,
-        follow: false,
-      },
-    }),
   };
 }
 
@@ -149,10 +108,6 @@ export const truncate = (str: string, length: number) => {
 export const getBlurDataURL = async (url: string | null) => {
   if (!url) {
     return "data:image/webp;base64,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-  }
-
-  if (url.startsWith("/_static/")) {
-    url = `${siteConfig.url}${url}`;
   }
 
   try {
